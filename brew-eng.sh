@@ -58,7 +58,6 @@ brew cask install -f \
   airtame \
   authy \
   slack \
-  gotomeeting \
   zoomus \
   iterm2 \
   keepingyouawake \
@@ -83,9 +82,11 @@ brew install -f \
   git \
   git-flow \
   git-lfs \
+  gnu-sed \
   go \
   hub \
   imagemagick \
+  jmeter \
   leiningen \
   node \
   protobuf \
@@ -138,6 +139,7 @@ brew cask install -f \
   postman \
   royal-tsx \
   rstudio \
+  rubymine \
   transmit \
   vagrant \
   vagrant-manager \
