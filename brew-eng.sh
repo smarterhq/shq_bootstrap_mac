@@ -61,6 +61,7 @@ brew cask install -f \
   amazon-chime \
   blue-jeans \
   zoomus \
+  dotnet-sdk \
   powershell \
   iterm2 \
   keepingyouawake \
