@@ -76,6 +76,7 @@ brew install -f \
   bash ksh tcsh zsh \
   bash-completion \
   findutils \
+  byobu \
   bfg \
   ccache \
   circleci \
