@@ -83,6 +83,7 @@ brew install -f \
   coreutils \
   curl \
   dos2unix \
+  elixir \
   git \
   git-flow \
   git-lfs \
