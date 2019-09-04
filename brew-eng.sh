@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export HOMEBREW_FORCE_BOTTLE=1
-export ACCEPT_EULA=y
+export HOMEBREW_NO_ENV_FILTERING=1
 
 ## Bootstrap Xcode Command Line Tools First
 
@@ -15,11 +15,11 @@ fi
 ## Bootstrap Homebrew
 
 # Check for Homebrew, install if we don't have it
-if [[ $(command -v brew) == "" ]]; then 
+if [[ $(command -v brew) == "" ]]; then
     echo "Bootstrap : Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-  echo "Bootstrap : Skipping hombrew tools, already installed..."  
+  echo "Bootstrap : Skipping hombrew tools, already installed..."
   brew upgrade
 fi
 
@@ -27,7 +27,7 @@ fi
 brew doctor
 
 # Make Cask available to Homebrew
-brew tap caskroom/cask 
+brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap homebrew/services
@@ -69,7 +69,7 @@ brew cask install -f \
 
 # Installing Microsoft Office
 brew cask reinstall microsoft-office
- 
+
 # Installing Developer Tools
 
 brew install -f \
@@ -129,9 +129,9 @@ brew install pg_top
 brew install redis
 
 # Installing Microsft SQL Command Line Tools
-ACCEPT_EULA=y brew install -f msodbcsql 
-ACCEPT_EULA=y brew install -f mssql-tools
-ACCEPT_EULA=y brew install -f azure-data-studio
+ACCEPT_EULA="Y" brew install -f msodbcsql
+ACCEPT_EULA="Y" brew install -f mssql-tools
+ACCEPT_EULA="Y" brew cask install -f azure-data-studio
 
 brew cask install -f \
   alfred \
