@@ -97,6 +97,7 @@ brew install -f \
   openssl \
   protobuf \
   python \
+  pre-commit \
   jq \
   wget \
   neovim \
