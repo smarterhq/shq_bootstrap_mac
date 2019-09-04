@@ -118,7 +118,7 @@ brew install pg_top
 brew install redis
 
 # Installing Microsft SQL Command Line Tools
-brew install -f --no-sandbox msodbcsql mssql-tools
+brew install -f msodbcsql mssql-tools
 brew install -f azure-data-studio
 
 brew cask install -f \
