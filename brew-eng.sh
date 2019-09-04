@@ -108,7 +108,7 @@ brew install -f \
   zlib
 
 # Installing Puppet Toolchain
-brew cask install -f puppetlabs/puppet/bolt
+brew cask install -f puppetlabs/puppet/puppet-bolt
 brew cask install -f puppetlabs/puppet/puppet-agent
 brew cask install -f puppetlabs/puppet/pdk
 
