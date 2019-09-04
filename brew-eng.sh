@@ -112,6 +112,7 @@ brew install -f \
   p7zip \
   rsync \
   rbenv \
+  shellcheck \
   screen \
   terraform \
   tmux \
