@@ -127,8 +127,9 @@ brew install pg_top
 brew install redis
 
 # Installing Microsft SQL Command Line Tools
-brew install -f msodbcsql mssql-tools
-brew install -f azure-data-studio
+ACCEPT_EULA=y brew install -f msodbcsql 
+ACCEPT_EULA=y brew install -f mssql-tools
+ACCEPT_EULA=y brew install -f azure-data-studio
 
 brew cask install -f \
   alfred \
