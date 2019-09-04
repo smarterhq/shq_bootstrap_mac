@@ -58,7 +58,10 @@ brew cask install -f \
   airtame \
   authy \
   slack \
+  amazon-chime \
+  blue-jeans \
   zoomus \
+  powershell \
   iterm2 \
   keepingyouawake \
   tunnelblick
@@ -89,6 +92,7 @@ brew install -f \
   jmeter \
   leiningen \
   node \
+  openssl \
   protobuf \
   python \
   jq \
