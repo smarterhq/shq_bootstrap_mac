@@ -58,6 +58,7 @@ brew cask install -f \
   airtame \
   authy \
   slack \
+  gotomeeting \
   zoomus \
   iterm2 \
   keepingyouawake \
