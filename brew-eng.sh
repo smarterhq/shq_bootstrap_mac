@@ -84,7 +84,7 @@ brew install -f \
   git-lfs \
   go \
   hub \
-  imagemagick --with-fontconfig --with-librsvg \
+  imagemagick \
   leiningen \
   node \
   protobuf \
