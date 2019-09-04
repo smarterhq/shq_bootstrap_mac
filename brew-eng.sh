@@ -89,7 +89,7 @@ brew install -f \
   leiningen \
   node \
   protobuf \
-  python --with-tcl-tk \
+  python \
   jq \
   wget \
   neovim \
