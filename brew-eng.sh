@@ -73,6 +73,9 @@ brew cask reinstall -f iterm2
 
 brew cask reinstall tunnelblick
 
+# Installing LibreOffice
+brew cask reinstall libreoffice
+
 # Installing Microsoft Office
 brew cask reinstall microsoft-office
 
@@ -166,11 +169,11 @@ brew cask install -f cyberduck
 brew cask install -f insomnia
 brew cask install -f keka
 brew cask install -f keybase
-brew cask install -f libreoffice
 brew cask install -f github
 brew cask install -f gpg-suite
 brew cask install -f postman
 brew cask install -f royal-tsx
+brew cask install -f r
 brew cask install -f rstudio
 brew cask install -f rubymine
 brew cask install -f transmit
