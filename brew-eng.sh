@@ -25,7 +25,7 @@ sudo chmod -fR g+w /usr/local/share
 # Check for Homebrew, install if we don't have it
 if [[ $(command -v brew) == "" ]]; then
     echo "Bootstrap : Installing homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   echo "Bootstrap : Skipping hombrew tools, already installed..."
   brew upgrade
@@ -48,6 +48,7 @@ brew update
 
 # Install pre-requisites
 brew reinstall brew-cask-completion
+brew reinstall ruby
 brew cask reinstall adoptopenjdk
 
 # Installing Browsers
