@@ -12,6 +12,12 @@ else
   xcode-select --install
 fi
 
+## Enforce user and group permissions on /usr/local/share...
+## - fixes root:wheel blocking proper brew install operations due to manpage directories being created as root:sheel under sudo required installs
+sudo chown -R "$USER" /usr/local/share
+sudo chgrp -fRh admin /usr/local/share
+sudo chmod -fR g+w /usr/local/share
+
 ## Bootstrap Homebrew
 
 # Check for Homebrew, install if we don't have it
@@ -43,34 +49,33 @@ brew reinstall brew-cask-completion
 brew cask reinstall adoptopenjdk
 
 # Installing Browsers
-
-brew cask install -f \
-  brave-browser\
-  google-chrome \
-  google-chrome-canary \
-  google-backup-and-sync \
-  google-hangouts \
-  firefox
+brew cask install -f brave-browser
+brew cask install -f google-chrome
+brew cask install -f google-chrome-canary
+brew cask install -f google-backup-and-sync
+brew cask install -f google-hangouts
+brew cask install -f firefox
 
 # Installing Desktop Tools
+brew cask install -f airtame
+brew cask install -f authy
+brew cask install -f keepingyouawake
 
-brew cask install -f \
-  airtame \
-  authy \
-  slack \
-  amazon-chime \
-  blue-jeans \
-  zoomus \
-  dotnet-sdk \
-  powershell \
-  iterm2 \
-  keepingyouawake \
-  tunnelblick
+brew cask reinstall -f slack
+brew cask reinstall -f amazon-chime
+brew cask reinstall -f blue-jeans
+brew cask reinstall -f zoomus
+
+brew cask reinstall -f powershell
+brew cask reinstall -f iterm2
+
+brew cask reinstall tunnelblick
 
 # Installing Microsoft Office
 brew cask reinstall microsoft-office
 
 # Installing Developer Tools
+brew cask reinstall -f dotnet-sdk
 
 brew install -f \
   bash ksh tcsh zsh \
@@ -118,6 +123,22 @@ brew install -f \
   tmux \
   zlib
 
+# Installing Developer VM Toolchain
+brew cask install -f docker
+brew cask install -f parallels
+brew cask install -f virtualbox
+brew cask install -f parallels
+brew cask install -f vagrant
+brew cask install -f vagrant-manager
+brew cask install -f virtualbox
+brew cask install -f virtualbox-extension-pack
+
+## Enforce user and group permissions on /usr/local/share...
+## - fixes root:wheel blocking proper brew install operations due to manpage directories being created as root:sheel under sudo required installs
+sudo chown -R "$USER" /usr/local/share
+sudo chgrp -fRh admin /usr/local/share
+sudo chmod -fR g+w /usr/local/share
+
 # Installing Puppet Toolchain
 brew cask install -f puppetlabs/puppet/puppet-bolt
 brew cask install -f puppetlabs/puppet/puppet-agent
@@ -137,7 +158,6 @@ brew cask install -f \
   alfred \
   atom \
   datagrip \
-  docker \
   cyberduck \
   insomnia \
   keka \
@@ -145,16 +165,11 @@ brew cask install -f \
   libreoffice \
   github \
   gpg-suite \
-  parallels \
   postman \
   royal-tsx \
   rstudio \
   rubymine \
   transmit \
-  vagrant \
-  vagrant-manager \
-  virtualbox \
-  virtualbox-extension-pack \
   visual-studio \
   visual-studio-code \
   transmission \
@@ -164,7 +179,6 @@ brew cask install -f \
 pip3 install --upgrade pip setuptools wheel
 
 # Setup system performance parameters
-
 chflags nohidden ~/Library
 
 defaults write com.apple.finder ShowPathbar -bool true
@@ -180,4 +194,3 @@ killall Dock
 killall Finder
 
 brew cleanup
-brew cask cleanup
