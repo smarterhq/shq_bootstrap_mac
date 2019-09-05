@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Make sure homebrew sbin is in path
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 export HOMEBREW_FORCE_BOTTLE=1
 export HOMEBREW_NO_ENV_FILTERING=1
 
