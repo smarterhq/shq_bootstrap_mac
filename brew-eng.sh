@@ -79,51 +79,54 @@ brew cask reinstall microsoft-office
 # Installing Developer Tools
 brew cask reinstall -f dotnet-sdk
 
-brew install -f \
-  bash ksh tcsh zsh \
-  bash-completion \
-  findutils \
-  byobu \
-  bfg \
-  ccache \
-  circleci \
-  cmake \
-  coreutils \
-  curl \
-  dos2unix \
-  elixir \
-  git \
-  git-flow \
-  git-lfs \
-  gnu-sed \
-  go \
-  hub \
-  imagemagick \
-  jmeter \
-  leiningen \
-  node \
-  openssl \
-  protobuf \
-  python \
-  pre-commit \
-  jq \
-  wget \
-  neovim \
-  vim \
-  macvim \
-  vimpager \
-  emacs \
-  colordiff \
-  htop \
-  unzip \
-  p7zip \
-  rsync \
-  rbenv \
-  shellcheck \
-  screen \
-  terraform \
-  tmux \
-  zlib
+brew install -f bash
+brew install -f bash-completion
+brew install -f ksh
+brew install -f tcsh
+brew install -f zsh
+brew install -f coreutils
+brew install -f findutils
+
+brew install -f byobu
+brew install -f bfg
+brew install -f ccache
+brew install -f circleci
+brew install -f cmake
+brew install -f curl
+brew install -f dos2unix
+brew install -f elixir
+brew install -f git
+brew install -f git-flow
+brew install -f git-lfs
+brew install -f gnu-sed
+brew install -f go
+brew install -f hub
+brew install -f imagemagick
+brew install -f jmeter
+brew install -f leiningen
+brew install -f node
+brew install -f openssl
+brew install -f protobuf
+brew install -f python
+brew install -f pre-commit
+brew install -f jq
+brew install -f wget
+brew install -f neovim
+brew install -f vim
+brew install -f macvim
+brew install -f vimpager
+brew install -f emacs
+brew install -f colordiff
+brew install -f htop
+brew install -f unzip
+brew install -f p7zip
+brew install -f rsync
+brew install -f rbenv
+brew install -f shellcheck
+brew install -f screen
+brew install -f terraform
+brew install -f tmux
+brew install -f zlib
 
 # Installing Developer VM Toolchain
 brew cask install -f docker
@@ -156,26 +159,25 @@ ACCEPT_EULA="Y" brew install -f msodbcsql
 ACCEPT_EULA="Y" brew install -f mssql-tools
 ACCEPT_EULA="Y" brew cask install -f azure-data-studio
 
-brew cask install -f \
-  alfred \
-  atom \
-  datagrip \
-  cyberduck \
-  insomnia \
-  keka \
-  keybase \
-  libreoffice \
-  github \
-  gpg-suite \
-  postman \
-  royal-tsx \
-  rstudio \
-  rubymine \
-  transmit \
-  visual-studio \
-  visual-studio-code \
-  transmission \
-  vlc
+brew cask install -f alfred
+brew cask install -f atom
+brew cask install -f datagrip
+brew cask install -f cyberduck
+brew cask install -f insomnia
+brew cask install -f keka
+brew cask install -f keybase
+brew cask install -f libreoffice
+brew cask install -f github
+brew cask install -f gpg-suite
+brew cask install -f postman
+brew cask install -f royal-tsx
+brew cask install -f rstudio
+brew cask install -f rubymine
+brew cask install -f transmit
+brew cask install -f visual-studio
+brew cask install -f visual-studio-code
+brew cask install -f transmission
+brew cask install -f vlc
 
 # Installing latest version of python pip
 pip3 install --upgrade pip setuptools wheel
