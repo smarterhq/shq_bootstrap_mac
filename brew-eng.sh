@@ -100,6 +100,7 @@ brew install -f cmake
 brew install -f curl
 brew install -f dos2unix
 brew install -f elixir
+brew install -f freetds
 brew install -f git
 brew install -f git-flow
 brew install -f git-lfs
