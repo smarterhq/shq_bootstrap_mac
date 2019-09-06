@@ -8,7 +8,12 @@ repos:
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
--   repo: https://github.com/michaeljoy/pre-commit-hooks
+    -   id: detect-aws-credentials
+        args: [--allow-missing-credentials]
+    -   id: detect-private-key
+    -   id: pretty-format-json
+        args: [--autofix --no-sort-keys]
+-   repo: https://github.com/smarterhq/shq_pre-commit_hooks
     rev: master
     hooks:
     -   id: shellcheck

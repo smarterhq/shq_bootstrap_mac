@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash 
+#!/usr/local/bin/bash
 #!/bin/bash
 
 ## The only way to increase Max Processes is to install Mac OS Server from the App Store
