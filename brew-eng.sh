@@ -91,6 +91,7 @@ brew install -f zsh
 brew install -f coreutils
 brew install -f findutils
 
+brew install -f black
 brew install -f byobu
 brew install -f bfg
 brew install -f ccache
@@ -102,6 +103,7 @@ brew install -f elixir
 brew install -f git
 brew install -f git-flow
 brew install -f git-lfs
+brew install -f git-secrets
 brew install -f gnu-sed
 brew install -f go
 brew install -f hub
