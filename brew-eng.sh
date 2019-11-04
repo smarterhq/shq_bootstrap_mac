@@ -107,6 +107,7 @@ brew install -f git-lfs
 brew install -f git-secrets
 brew install -f gnu-sed
 brew install -f go
+brew install -f hadolint
 brew install -f hub
 brew install -f imagemagick
 brew install -f jmeter
