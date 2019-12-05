@@ -1,4 +1,5 @@
 # shq_bootstrap_mac
+
 OSX Setup Dependencies for Development
 
 - Do not run these as sudo or root! You will be prompted and privileges dropped as necessary.

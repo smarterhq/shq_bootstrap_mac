@@ -90,7 +90,6 @@ brew install -f tcsh
 brew install -f zsh
 brew install -f coreutils
 brew install -f findutils
-
 brew install -f black
 brew install -f byobu
 brew install -f bfg
@@ -134,10 +133,12 @@ brew install -f shellcheck
 brew install -f screen
 brew install -f terraform
 brew install -f tmux
+brew install -f watch
 brew install -f zlib
 
 # Installing Developer VM Toolchain
 brew cask install -f docker
+brew cask install -f docker-compose
 brew cask install -f parallels
 brew cask install -f virtualbox
 brew cask install -f parallels
@@ -188,7 +189,7 @@ brew cask install -f transmission
 brew cask install -f vlc
 
 # Installing latest version of python pip
-pip3 install --upgrade pip setuptools wheel
+pip3 install --upgrade pip pipenv setuptools wheel
 
 # Setup system performance parameters
 chflags nohidden ~/Library
