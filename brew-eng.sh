@@ -205,4 +205,114 @@ defaults write NSGlobalDomain NSWindowResizeTime .001
 killall Dock
 killall Finder
 
+#new commands for bootstrap
+brew install homebrew/bundle
+brew cask install brewservicesmenubar
+brew install tfsec 
+brew tap wata727/tflint
+
+# Cryptography and SSL/TLS Toolkit
+brew install openssl@1.1
+
+# General-purpose data compression with high compression ratio
+brew install xz
+
+# Interpreted, interactive, object-oriented programming language
+brew install python@3.8
+
+# Software library to render fonts
+brew install freetype
+
+# Core application library for C
+brew install glib
+
+# Vector graphics library with cross-device output support
+brew install cairo
+
+# Arbitrary precision calculator
+brew install calc
+
+# Command-line tool for Amazon Route 53
+brew install cli53
+
+# Statistics utility to count lines of code
+brew install cloc
+
+# Get a file from an HTTP, HTTPS or FTP server
+brew install curl
+
+# Docker Credential Helper for Amazon ECR
+brew install docker-credential-helper-ecr
+
+# GNU multiple precision arithmetic library
+brew install gmp
+
+# Manage compile and link flags for libraries
+brew install pkg-config
+
+# OpenType text shaping engine
+brew install harfbuzz
+
+# Command-line outline and bitmap font editor/converter
+brew cask install fontforge
+
+# Library for manipulating fonts
+brew install fonttools
+
+# GNU version of the tar archiving utility
+brew install -f gnu-tar
+
+# GNU grep, egrep and fgrep
+brew install grep
+
+# JSON parser and validator with a CLI
+brew install jsonlint
+
+# Sophisticated file transfer program
+brew install lftp
+
+# Count lines of code quickly
+brew install loc
+
+# Drop-in replacement for MySQL
+#To have launchd start mariadb now and restart at login:
+#brew services start mariadb
+brew install mariadb
+
+# Collection of tools that nobody wrote when UNIX was young
+brew install moreutils
+
+# FTP client with an advanced user interface
+brew install ncftp
+
+# Utility for managing network connections
+brew install netcat
+
+# PNG file optimizer
+brew install optipng
+
+# General-purpose scripting language
+brew install php
+
+# Object-relational database system
+brew install postgresql@11
+
+# HTTP regression testing and benchmarking utility
+brew install siege
+
+# S/MIME signing utility for use with Git
+brew install smimesign
+
+# User interface to the TELNET protocol
+brew install telnet
+
+# Tool to generate documentation from Terraform modules
+brew install terraform-docs
+
+# Library to create, extract, and modify Windows Imaging files
+brew install wimlib
+
+# tool to install snowflake db
+brew cask install snowflake-snowsql
+
 brew cleanup
