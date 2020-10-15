@@ -202,8 +202,6 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -int 0
 defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write NSGlobalDomain NSWindowResizeTime .001
-killall Dock
-killall Finder
 
 #new commands for bootstrap
 brew install homebrew/bundle
@@ -314,5 +312,8 @@ brew install wimlib
 
 # tool to install snowflake db
 brew cask install snowflake-snowsql
+
+killall Dock
+killall Finder
 
 brew cleanup
