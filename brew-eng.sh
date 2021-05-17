@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Make sure homebrew sbin is in path
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
@@ -35,9 +35,9 @@ fi
 brew doctor
 
 # Make Cask available to Homebrew
-brew tap caskroom/cask
-brew tap caskroom/fonts
-brew tap caskroom/versions
+#brew tap homebrew/cask
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
 brew tap homebrew/services
 brew tap adoptopenjdk/openjdk
 brew tap microsoft/mssql-release
@@ -52,25 +52,25 @@ brew reinstall ruby
 brew cask reinstall adoptopenjdk
 
 # Installing Browsers
-brew cask install -f brave-browser
-brew cask install -f google-chrome
-brew cask install -f google-chrome-canary
-brew cask install -f google-backup-and-sync
-brew cask install -f google-hangouts
-brew cask install -f firefox
+brew cask install brave-browser
+brew cask install google-chrome
+brew cask install google-chrome-canary
+brew cask install google-backup-and-sync
+brew cask install google-hangouts
+brew cask install firefox
 
 # Installing Desktop Tools
-brew cask install -f airtame
-brew cask install -f authy
-brew cask install -f keepingyouawake
+brew cask install airtame
+brew cask install authy
+brew cask install keepingyouawake
 
-brew cask reinstall -f slack
-brew cask reinstall -f amazon-chime
-brew cask reinstall -f blue-jeans
-brew cask reinstall -f zoomus
+brew cask reinstall slack
+brew cask reinstall amazon-chime
+brew cask reinstall bluejeans
+brew cask reinstall zoomus
 
-brew cask reinstall -f powershell
-brew cask reinstall -f iterm2
+brew cask reinstall powershell
+brew cask reinstall iterm2
 
 brew cask reinstall tunnelblick
 
@@ -81,7 +81,7 @@ brew cask reinstall libreoffice
 brew cask reinstall microsoft-office
 
 # Installing Developer Tools
-brew cask reinstall -f dotnet-sdk
+brew cask reinstall dotnet-sdk
 
 brew install -f bash
 brew install -f bash-completion
@@ -137,15 +137,14 @@ brew install -f watch
 brew install -f zlib
 
 # Installing Developer VM Toolchain
-brew cask install -f docker
-brew cask install -f docker-compose
-brew cask install -f parallels
-brew cask install -f virtualbox
-brew cask install -f parallels
-brew cask install -f vagrant
-brew cask install -f vagrant-manager
-brew cask install -f virtualbox
-brew cask install -f virtualbox-extension-pack
+brew cask install docker
+brew install docker-compose
+brew cask install parallels
+brew cask install vagrant
+brew cask install vagrant-manager
+# if you see any issues while running virtualbox or virtualbox-extension-pack make sure you allow "Oracle-America" in security and privacy. 
+brew cask install virtualbox
+brew cask install virtualbox-extension-pack
 
 ## Enforce user and group permissions on /usr/local/share...
 ## - fixes root:wheel blocking proper brew install operations due to manpage directories being created as root:sheel under sudo required installs
@@ -154,9 +153,9 @@ sudo chgrp -fRh admin /usr/local/share
 sudo chmod -fR g+w /usr/local/share
 
 # Installing Puppet Toolchain
-brew cask install -f puppetlabs/puppet/puppet-bolt
-brew cask install -f puppetlabs/puppet/puppet-agent
-brew cask install -f puppetlabs/puppet/pdk
+brew cask install puppetlabs/puppet/puppet-bolt
+brew cask install puppetlabs/puppet/puppet-agent
+brew cask install puppetlabs/puppet/pdk
 
 # Installing Developer Data Layers
 brew install postgresql
@@ -164,29 +163,29 @@ brew install pg_top
 brew install redis
 
 # Installing Microsft SQL Command Line Tools
-ACCEPT_EULA="Y" brew install -f msodbcsql
-ACCEPT_EULA="Y" brew install -f mssql-tools
-ACCEPT_EULA="Y" brew cask install -f azure-data-studio
+ACCEPT_EULA="Y" brew install msodbcsql
+ACCEPT_EULA="Y" brew install mssql-tools
+ACCEPT_EULA="Y" brew cask install azure-data-studio
 
-brew cask install -f alfred
-brew cask install -f atom
-brew cask install -f datagrip
-brew cask install -f cyberduck
-brew cask install -f insomnia
-brew cask install -f keka
-brew cask install -f keybase
-brew cask install -f github
-brew cask install -f gpg-suite
-brew cask install -f postman
-brew cask install -f royal-tsx
-brew cask install -f r
-brew cask install -f rstudio
-brew cask install -f rubymine
-brew cask install -f transmit
-brew cask install -f visual-studio
-brew cask install -f visual-studio-code
-brew cask install -f transmission
-brew cask install -f vlc
+brew cask install alfred
+brew cask install atom
+brew cask install datagrip
+brew cask install cyberduck
+brew cask install insomnia
+brew cask install keka
+brew cask install keybase
+brew cask install github
+brew cask install gpg-suite
+brew cask install postman
+brew cask install royal-tsx
+brew cask install r
+brew cask install rstudio
+brew cask install rubymine
+brew cask install transmit
+brew cask install visual-studio
+brew cask install visual-studio-code
+brew cask install transmission
+brew cask install vlc
 
 # Installing latest version of python pip
 pip3 install --upgrade pip pipenv setuptools wheel
@@ -203,6 +202,117 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -int 0
 defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write NSGlobalDomain NSWindowResizeTime .001
+
+#new commands for bootstrap
+brew install homebrew/bundle
+brew cask install brewservicesmenubar
+brew install tfsec 
+brew tap wata727/tflint
+
+# Cryptography and SSL/TLS Toolkit
+brew install openssl@1.1
+
+# General-purpose data compression with high compression ratio
+brew install xz
+
+# Interpreted, interactive, object-oriented programming language
+brew install python@3.8
+
+# Software library to render fonts
+brew install freetype
+
+# Core application library for C
+brew install glib
+
+# Vector graphics library with cross-device output support
+brew install cairo
+
+# Arbitrary precision calculator
+brew install calc
+
+# Command-line tool for Amazon Route 53
+brew install cli53
+
+# Statistics utility to count lines of code
+brew install cloc
+
+# Get a file from an HTTP, HTTPS or FTP server
+brew install curl
+
+# Docker Credential Helper for Amazon ECR
+brew install docker-credential-helper-ecr
+
+# GNU multiple precision arithmetic library
+brew install gmp
+
+# Manage compile and link flags for libraries
+brew install pkg-config
+
+# OpenType text shaping engine
+brew install harfbuzz
+
+# Command-line outline and bitmap font editor/converter
+brew cask install fontforge
+
+# Library for manipulating fonts
+brew install fonttools
+
+# GNU version of the tar archiving utility
+brew install -f gnu-tar
+
+# GNU grep, egrep and fgrep
+brew install grep
+
+# JSON parser and validator with a CLI
+brew install jsonlint
+
+# Sophisticated file transfer program
+brew install lftp
+
+# Count lines of code quickly
+brew install loc
+
+# Drop-in replacement for MySQL
+#To have launchd start mariadb now and restart at login:
+#brew services start mariadb
+brew install mariadb
+
+# Collection of tools that nobody wrote when UNIX was young
+brew install moreutils
+
+# FTP client with an advanced user interface
+brew install ncftp
+
+# Utility for managing network connections
+brew install netcat
+
+# PNG file optimizer
+brew install optipng
+
+# General-purpose scripting language
+brew install php
+
+# Object-relational database system
+brew install postgresql@11
+
+# HTTP regression testing and benchmarking utility
+brew install siege
+
+# S/MIME signing utility for use with Git
+brew install smimesign
+
+# User interface to the TELNET protocol
+brew install telnet
+
+# Tool to generate documentation from Terraform modules
+brew install terraform-docs
+
+# Library to create, extract, and modify Windows Imaging files
+brew install wimlib
+
+# tool to install snowflake db
+brew cask install snowflake-snowsql
+
 killall Dock
 killall Finder
 
