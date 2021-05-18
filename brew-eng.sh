@@ -3,7 +3,8 @@
 # Make sure homebrew sbin is in path
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 export HOMEBREW_FORCE_BOTTLE=1
-export HOMEBREW_NO_ENV_FILTERING=1
+export ACCEPT_EULA=Y
+# export HOMEBREW_NO_ENV_FILTERING=1
 
 ## Bootstrap Xcode Command Line Tools First
 
@@ -35,53 +36,55 @@ fi
 brew doctor
 
 # Make Cask available to Homebrew
-#brew tap homebrew/cask
+brew tap homebrew/bundle
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
 brew tap homebrew/services
 brew tap adoptopenjdk/openjdk
 brew tap microsoft/mssql-release
 brew tap puppetlabs/puppet
+brew tap wata727/tflint
 
 # Update Homebrew recipes
 brew update
 
 # Install pre-requisites
-brew reinstall brew-cask-completion
-brew reinstall ruby
-brew cask reinstall adoptopenjdk
+brew install brew-cask-completion
+brew install ruby
+brew install --cask adoptopenjdk
 
 # Installing Browsers
-brew cask install brave-browser
-brew cask install google-chrome
-brew cask install google-chrome-canary
-brew cask install google-backup-and-sync
-brew cask install google-hangouts
-brew cask install firefox
+brew install --cask brave-browser
+brew install --cask google-chrome
+brew install --cask google-chrome-canary
+brew install --cask google-backup-and-sync
+brew install --cask google-hangouts
+brew install --cask firefox
 
 # Installing Desktop Tools
-brew cask install airtame
-brew cask install authy
-brew cask install keepingyouawake
+brew install --cask airtame
+brew install --cask authy
+brew install --cask keepingyouawake
 
-brew cask reinstall slack
-brew cask reinstall amazon-chime
-brew cask reinstall bluejeans
-brew cask reinstall zoomus
+brew install --cask slack
+brew install --cask amazon-chime
+brew install --cask bluejeans
+brew uninstall zoomus
+brew install --cask zoom
 
-brew cask reinstall powershell
-brew cask reinstall iterm2
+brew install --cask powershell
+brew install --cask iterm2
 
-brew cask reinstall tunnelblick
+brew install --cask tunnelblick
 
 # Installing LibreOffice
-brew cask reinstall libreoffice
+brew install --cask libreoffice
 
 # Installing Microsoft Office
-brew cask reinstall microsoft-office
+brew install --cask microsoft-office
 
 # Installing Developer Tools
-brew cask reinstall dotnet-sdk
+brew install --cask dotnet-sdk
 
 brew install -f bash
 brew install -f bash-completion
@@ -131,20 +134,22 @@ brew install -f rsync
 brew install -f rbenv
 brew install -f shellcheck
 brew install -f screen
-brew install -f terraform
+brew uninstall -f terraform
+brew install -f tfenv
+brew install -f tfsec
 brew install -f tmux
 brew install -f watch
 brew install -f zlib
 
 # Installing Developer VM Toolchain
-brew cask install docker
-brew install docker-compose
-brew cask install parallels
-brew cask install vagrant
-brew cask install vagrant-manager
-# if you see any issues while running virtualbox or virtualbox-extension-pack make sure you allow "Oracle-America" in security and privacy. 
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
+brew uninstall docker-compose
+brew install --cask docker
+brew install --cask parallels
+brew install --cask vagrant
+brew install --cask vagrant-manager
+# if you see any issues while running virtualbox or virtualbox-extension-pack make sure you allow "Oracle-America" in security and privacy.
+brew install --cask virtualbox
+brew install --cask virtualbox-extension-pack
 
 ## Enforce user and group permissions on /usr/local/share...
 ## - fixes root:wheel blocking proper brew install operations due to manpage directories being created as root:sheel under sudo required installs
@@ -153,9 +158,9 @@ sudo chgrp -fRh admin /usr/local/share
 sudo chmod -fR g+w /usr/local/share
 
 # Installing Puppet Toolchain
-brew cask install puppetlabs/puppet/puppet-bolt
-brew cask install puppetlabs/puppet/puppet-agent
-brew cask install puppetlabs/puppet/pdk
+brew install --cask puppetlabs/puppet/puppet-bolt
+brew install --cask puppetlabs/puppet/puppet-agent
+brew install --cask puppetlabs/puppet/pdk
 
 # Installing Developer Data Layers
 brew install postgresql
@@ -165,27 +170,28 @@ brew install redis
 # Installing Microsft SQL Command Line Tools
 ACCEPT_EULA="Y" brew install msodbcsql
 ACCEPT_EULA="Y" brew install mssql-tools
-ACCEPT_EULA="Y" brew cask install azure-data-studio
+ACCEPT_EULA="Y" brew install --cask azure-data-studio
 
-brew cask install alfred
-brew cask install atom
-brew cask install datagrip
-brew cask install cyberduck
-brew cask install insomnia
-brew cask install keka
-brew cask install keybase
-brew cask install github
-brew cask install gpg-suite
-brew cask install postman
-brew cask install royal-tsx
-brew cask install r
-brew cask install rstudio
-brew cask install rubymine
-brew cask install transmit
-brew cask install visual-studio
-brew cask install visual-studio-code
-brew cask install transmission
-brew cask install vlc
+brew install --cask alfred
+brew install --cask atom
+brew install --cask brewservicesmenubar
+brew install --cask cyberduck
+brew install --cask datagrip
+brew install --cask insomnia
+brew install --cask keka
+brew install --cask keybase
+brew install --cask github
+brew install --cask gpg-suite
+brew install --cask postman
+brew install --cask royal-tsx
+brew install --cask r
+brew install --cask rstudio
+brew install --cask rubymine
+brew install --cask transmit
+brew install --cask visual-studio
+brew install --cask visual-studio-code
+brew install --cask transmission
+brew install --cask vlc
 
 # Installing latest version of python pip
 pip3 install --upgrade pip pipenv setuptools wheel
@@ -202,12 +208,6 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -int 0
 defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write NSGlobalDomain NSWindowResizeTime .001
-
-#new commands for bootstrap
-brew install homebrew/bundle
-brew cask install brewservicesmenubar
-brew install tfsec 
-brew tap wata727/tflint
 
 # Cryptography and SSL/TLS Toolkit
 brew install openssl@1.1
@@ -252,7 +252,7 @@ brew install pkg-config
 brew install harfbuzz
 
 # Command-line outline and bitmap font editor/converter
-brew cask install fontforge
+brew install --cask fontforge
 
 # Library for manipulating fonts
 brew install fonttools
@@ -311,7 +311,13 @@ brew install terraform-docs
 brew install wimlib
 
 # tool to install snowflake db
-brew cask install snowflake-snowsql
+brew install --cask snowflake-snowsql
+
+## Enforce user and group permissions on /usr/local/share...
+## - fixes root:wheel blocking proper brew install operations due to manpage directories being created as root:sheel under sudo required installs
+sudo chown -R "$USER" /usr/local/share
+sudo chgrp -fRh admin /usr/local/share
+sudo chmod -fR g+w /usr/local/share
 
 killall Dock
 killall Finder
