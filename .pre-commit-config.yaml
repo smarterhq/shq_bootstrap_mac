@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.4.0
+    rev: v4.0.1
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -20,26 +20,26 @@ repos:
       - id: detect-private-key
       - id: mixed-line-ending
   - repo: https://github.com/smarterhq/shq_pre-commit_hooks
-    rev: 3722c4ea08052db36acca86fc28dc19fd086430b
+    rev: a76ef7944652b491e02f1382be3083e821e34e92
     hooks:
       - id: shellcheck
       - id: hadolint
   - repo: https://github.com/psf/black
-    rev: 19.10b0
+    rev: 21.5b1
     hooks:
       - id: black
         args: ["-l 200"]
   - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.7.9
+    rev: 3.9.2
     hooks:
       - id: flake8
         additional_dependencies: [flake8-bugbear, flake8-import-order, flake8-docstrings]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.750
+    rev: v0.812
     hooks:
       - id: mypy
-  - repo: https://github.com/prettier/prettier
-    rev: 1.19.1
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.3.0
     hooks:
       - id: prettier
         args: ["--print-width=200", "--prose-wrap=preserve"]
